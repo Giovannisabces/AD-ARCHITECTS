@@ -3,22 +3,20 @@ import Layout from '../layouts/Layout.astro';
 import About from '@/components/About.astro';
 import Footer from '@/components/Footer.astro';
 import Intro from '@/components/Intro.astro';
-import Bento from '@/components/Bento.astro';
-import Header from '@/components/Header.astro';
-import CardServicio from '@/components/CardServicio.astro';
 
 ---
-
 <Layout 
 	title="AD ARCHITECTS - Brindandote un servicio que superara tus espectativas"
 	description="Empresa destinada a transformar ideas en realidades, generacion de diseños y remodelaciones"
 >
 	<main>
-		<Intro/>
-		<CardServicio/>
+		<About/>
 	</main>
 	<Footer/>
 </Layout>
 
 <style>
+	body{
+		background: #1753ea;
+	}
 </style>

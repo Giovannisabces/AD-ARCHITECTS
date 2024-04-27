@@ -1,5 +1,6 @@
 ---
 import Header from '@/components/Header.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -16,7 +17,9 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Header/>
@@ -35,11 +38,19 @@ const { title, description } = Astro.props;
 			white 60%
 		);
 	}
+	* {
+		box-sizing: border-box;
+	}
+	*::before, *::after {
+		box-sizing: inherit;
+	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #06050A;
 		background-size: 224px;
+		color-scheme: dark light;
 	}
+
 	code {
 		font-family:
 			Menlo,

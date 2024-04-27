@@ -1,0 +1,73 @@
+---
+import GitHub from "@/Icons/Footer/GitHub.astro"
+import Instagram from "@/Icons/Footer/Instagram.astro"
+import LinkedIn from "@/Icons/Footer/LinkedIn.astro"
+import Facebook from "@/Icons/Footer/Facebook.astro"
+import X from "@/Icons/Footer/X.astro"
+import Logo from "@/Icons/Logo.astro"
+const name = "AD-ARCHITECT SAS"
+const profiles = [
+        {
+            network: "Instagram",
+            userName: "AD-ARCHITECT SAS",
+            url: "https://www.instagram.com/adarchitectssas/"
+        },
+        {
+            network: "Facebook",
+            userName: "AD-ARCHITECT SAS",
+            url: "https://www.facebook.com/"
+        },
+        // {
+        //   "network": "LinkedIn",
+        //   "username": "Giovanni Sabogal Cespedes",
+        //   "url": "https://www.linkedin.com/in/giovanni-sabogal-cespedes/"
+        // },
+      ];
+const SOCIAL_ICONS:Record<string,any> = {
+    Instagram,
+    Facebook,
+    GitHub,
+    LinkedIn,
+    X
+}
+---
+<footer class="flex flex-col ">
+    <div class="flex flex-row  justify-center items-center gap-3">
+        <!-- before:block before:absolute before:-inset-1 before:bg-white before:rounded-xl before:top-5 before:left-5 before:z-0
+        relative z-10 -->
+        <div class=" shadow-addres
+        w-36 h-28 bg-yellow-ad rounded-xl border-slate-950 border-2
+        p-4 text-xs text-pretty text-center text-primary-black-ad">
+        OFICINA BOGOTA <br> D.C <br> Cra 16 No 52-49 <br>tercer piso.
+        </div>
+        <!-- <div class="w-36 h-20 bg-yellow-ad rounded-xl border-slate-950 border-2 "></div> -->
+
+        <Logo width="194" height="138"/>
+    </div>
+    <div class="mt-4 mb-4 mx-auto flex flex-row flex-wrap justify-between gap-6">
+        {
+            profiles.map(({network, url}) => {
+                const Icon = SOCIAL_ICONS[network]
+                return (
+                    <a
+                        href={url}
+                        title={`Visitar el perfil de ${name} en ${network}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Icon/>
+                    </a>
+                )
+            })
+        }
+    </div>
+    <div class="mx-auto">
+        <p class="">
+            WWW.ADARCHITECTSSAS.COM
+        </p>
+    </div>
+
+</footer>
+
+<style>
+</style>

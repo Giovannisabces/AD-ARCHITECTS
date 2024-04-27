@@ -1,0 +1,79 @@
+---
+// import Hamburger from "@/Icons/Hamburger.astro"
+type OptionsMenu = {
+	name: string
+	link: string
+}
+type Menus = {
+	name: string
+	options: OptionsMenu[]
+}
+const navMenu = [
+  {
+    name: "Ofrecemos servicios de:",
+    opciones: [
+      {
+        name: "Diseños Arquitectonicos",
+        link: "/"
+      },
+      {
+        name: "Diseños Interiores y Cocinas",
+        link: "/"
+      },{
+        name: "Remodelaciones y construcicones",
+        link: "/"
+      },{
+        name: "Impearmebilizaciones de fachadas y cubiertas",
+        link: "/"
+      },
+      {
+        name: "Mantenimientos Generales",
+        link: ""
+      },
+    ]
+  }
+]
+const list = navMenu.map(item =>{
+	return (item.opciones.map(opcion=>opcion.link))
+	}
+)
+
+// console.log(list)
+---
+<nav class="nav flex flex-col flex-nowrap justify-center items-center overflow-hidden pointer-events-none w-full h-0 md:block  md:w-auto transition-all ease-in-out duration-500">
+	<ul class= "flex flex-col md:flex-row flex-nowrap justify-end items-center  ">
+		<li class="li my-4  md:mx-3"><a href="" class="a">item 1</a></li>
+		<li class="li my-4  md:mx-3"><a href="" class="a">item 2</a></li>
+		<li class="li my-4  md:mx-3"><a href="" class="a">item 3</a></li>
+		<li class="li my-4  md:mx-3"><a href="" class="a">item 4</a></li>
+		<li class="li my-4  md:mx-3"><a href="" class="a">item 5</a></li>
+		
+		
+		<!-- { -->
+			
+			<!-- navMenu.map(principalOption => {
+			// 	return (
+			// 		<li class="w-full text-center" > {principalOption.name} </p></li>
+			// 		{
+			// 			if (principalOption.opciones.length != 0) {
+			// 				<ul>
+			// 				principalOption.opciones.map(servicio => {
+								
+			// 					return (
+			// 						<li> {servicio}</li>	
+			// 					)
+			// 				})
+			// 				</ul>
+			// 			}
+			// 		}
+			// 		)
+			// 	})
+			// }</li> -->
+	</ul>
+</nav>
+<style>
+	.nav.activo{
+		height: 50vb;
+		pointer-events: auto;
+	}
+</style>
