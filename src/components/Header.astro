@@ -15,8 +15,8 @@ const navItems = [
     url: "/proyects",
   },
   {
-    title: "Sobre mí",
-    label: "sobre-mi",
+    title: "Sobre nosotros",
+    label: "sobre-nosotros",
     url: "/about",
   },
   {
@@ -30,7 +30,7 @@ const navItems = [
 <!-- <header class=" h-10 top-0 w-full mb-12 mx-auto " > -->
 <header class=" flex flex-row flex-wrap justify-between items-center w-full" > 
   <!-- Bussines Logo -->
-  <a class="logo h-auto " href="/" aria-label="Logotipo AD-Architect" >
+  <a class="logo h-auto m-5 " href="/" aria-label="Logotipo AD-Architect" >
 		<svg width="194" viewBox="0 0 194 138" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<rect width="194" height="138" fill="url(#pattern0_65_6)"/>
 			<defs>
@@ -42,10 +42,10 @@ const navItems = [
 		</svg>			
 	</a>
   <!-- Hamburger Button -->
-	<button id="menu" class="menu h-auto py-0 fill-silver-ad red flex items-center w-auto md:hidden">
-		<!-- width="160"
-		height="160" -->
-		<svg 
+	<button id="menu" class="menu py-0 fill-silver-ad red flex items-center w-16 m-5 md:hidden">
+    <svg 
+		width="160"
+		height="160"
 		id="hamburger" 
 		class="Header__toggle-svg h-auto m-auto sm:h-5 object-cover mx-auto" 
 		viewBox="0 0 60 40"
@@ -65,14 +65,7 @@ const navItems = [
     <Navbar></Navbar>
 </header>
 <script>
-  const btnMenu = document.querySelector("#menu");
-  const hamburger = document.querySelector("#hamburger");
-  /* Cuando hago CLICK .button, .nav TOGGLE 'activo' */
-  const nav = document.querySelector(".nav");
-  btnMenu?.addEventListener("click", function (event) {
-    hamburger?.toggleAttribute("hamburger")
-    nav?.classList.toggle('activo')
-  });
+  import "../scripts/menuHamburger.ts";
 </script>
 <style>
     nav {
