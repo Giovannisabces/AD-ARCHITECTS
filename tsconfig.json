@@ -7,8 +7,11 @@
         "./adarquitecture.json"
       ],
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     }
-  }
+  },
+  "exclude": [
+    "public"
+  ]
 }
