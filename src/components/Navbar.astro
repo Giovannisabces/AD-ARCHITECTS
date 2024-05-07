@@ -1,74 +1,70 @@
 ---
 // import Hamburger from "@/Icons/Hamburger.astro"
-type OptionsMenu = {
-	name: string
-	link: string
-}
-type Menus = {
-	name: string
-	options: OptionsMenu[]
-}
-const navMenu = [
-  {
-    name: "Ofrecemos servicios de:",
-    opciones: [
-      {
+
+const servicios = [
+	{
         name: "Diseños Arquitectonicos",
-        link: "/"
+        link: "/Diseno-Arquitectonicos"
       },
       {
         name: "Diseños Interiores y Cocinas",
-        link: "/"
+        link: "/Interiores-y-Cocinas"
       },{
         name: "Remodelaciones y construcicones",
-        link: "/"
+        link: "/Remodelaciones-y-construcicones"
       },{
-        name: "Impearmebilizaciones de fachadas y cubiertas",
-        link: "/"
+        name: "Impermeabilizaciones de fachadas y cubiertas",
+        link: "/Impermeabilizaciones"
       },
       {
         name: "Mantenimientos Generales",
-        link: ""
-      },
-    ]
-  }
+        link: "/Mantenimientos"
+      }
 ]
-const list = navMenu.map(item =>{
-	return (item.opciones.map(opcion=>opcion.link))
-	}
-)
+const navMenu = [
+  {
+    name: "Ofrecemos servicios de:",
+	submenu: servicios
+  },
+  {
+     name: "Nosotros",
+  },
+  {
+    name: "Contactanos",
+  },
+  {
+    name: "",
+  },
+
+]
+
 
 // console.log(list)
 ---
 <nav class="nav flex flex-col flex-nowrap justify-center items-center overflow-hidden pointer-events-none w-full h-0 md:block  md:w-auto transition-all ease-in-out duration-500">
 	<ul class= "flex flex-col md:flex-row flex-nowrap justify-end items-center  ">
-		<li class="li my-4  md:mx-3"><a href="" class="a">item 1</a></li>
-		<li class="li my-4  md:mx-3"><a href="" class="a">item 2</a></li>
-		<li class="li my-4  md:mx-3"><a href="" class="a">item 3</a></li>
-		<li class="li my-4  md:mx-3"><a href="" class="a">item 4</a></li>
-		<li class="li my-4  md:mx-3"><a href="" class="a">item 5</a></li>
-		
-		
-		<!-- { -->
-			
-			<!-- navMenu.map(principalOption => {
-			// 	return (
-			// 		<li class="w-full text-center" > {principalOption.name} </p></li>
-			// 		{
-			// 			if (principalOption.opciones.length != 0) {
-			// 				<ul>
-			// 				principalOption.opciones.map(servicio => {
-								
-			// 					return (
-			// 						<li> {servicio}</li>	
-			// 					)
-			// 				})
-			// 				</ul>
-			// 			}
-			// 		}
-			// 		)
-			// 	})
-			// }</li> -->
+		<!-- <li class="li my-4  md:mx-3"><a href="/" class="a">item 1</a></li>
+		<li class="li my-4  md:mx-3"><a href="/proyects/" class="a">item 2</a></li>
+		<li class="li my-4  md:mx-3"><a href="/" class="a">item 3</a></li>
+		<li class="li my-4  md:mx-3"><a href="/" class="a">item 4</a></li>
+		<li class="li my-4  md:mx-3"><a href="/" class="a">item 5</a></li> -->
+		<li class="li my-4  md:mx-3"><button class="servicios"></button></li> 
+		<!-- {		
+			 navMenu.map(principalOption => {
+			 	
+			 		<li class="w-full text-center" > {principalOption.name} </p></li>
+			 		{
+			 			if (principalOption.opciones.length != 0) {
+			 				<ul>
+			 				principalOption.opciones.map(servicio => {
+			 						<li> {servicio}</li>	
+			 				})
+			 				</ul>
+			 			}
+			 		}
+			 		
+			 	})
+			}</li> -->
 	</ul>
 </nav>
 <style>
