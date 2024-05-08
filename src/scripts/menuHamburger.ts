@@ -1,11 +1,6 @@
 import { $, $$ } from "@/lib/dom-selector"
+import { DISPLAY } from "./DISPLAY"
 
-  //--------------------------------------------------------
-  const DISPLAY = {
-		hamburgerMenuClass: ".menu",
-		open: "open",
-		hamburgerButtonClicked: "hamburgerButtonClicked",
-	} as const
   document.addEventListener("astro:page-load", () => {
 		const hamburgerButton = $(DISPLAY.hamburgerMenuClass)
 
@@ -28,25 +23,27 @@ import { $, $$ } from "@/lib/dom-selector"
 	})
   //--------------------------------------------------------
 
-	function toggleMenu(nav: HTMLElement | null) {
-		nav?.classList.toggle("activo")
-    console.log("menuMobile Toggle menu");
-	}
-  console.log("loaded")
+function toggleMenu(nav: HTMLElement | null, requireClass?:boolean ) {
+	nav?.classList.toggle("activo")
+}
+function toggleMenuService(nav: HTMLElement | null, btn: HTMLElement | null, texbtnbtn: HTMLElement | null) {
+	nav?.classList.toggle("activo")
+	btn?.classList.toggle("bg-primary-black-ad")
+	texbtnbtn?.classList.toggle("text-yellow-ad-sec")
 
-	document.addEventListener("astro:page-load", () => {
-		const nav = $(".nav")
-		// const menuButton = $("#menuButton")
-		const menuButton = $(".menu")
+console.log("menuMobile Toggle menu");
+}
 
-		menuButton?.addEventListener("click", () => toggleMenu(nav))
-		// innerMenuButton?.addEventListener("hamburgerButtonClicked", () =>)
-    // toggleMenu(nav)
-    console.log("start Toggle menu");
-    console.log(menuButton);
+document.addEventListener("astro:page-load", () => {
+	const nav = $(".nav")
+	const serviceMenu = $(".servicesMenu")
+	const menuButton = $(".menu")
+	const serviceButton = $(".serviceBtnMenu")
+	const containerService = $(".containerService")
 
-
-		// if (menuMobileContext?.classList.contains("open")) {
-		// 	toggleMenu(nav, menuMobileContext)
-		// }
+	menuButton?.addEventListener("click", () => toggleMenu(nav))
+	serviceButton?.addEventListener("click", () => {
+		console.log("menuServicio Toggle activo")
+		toggleMenuService(serviceMenu, containerService, serviceButton)
 	})
+})
