@@ -1,0 +1,16 @@
+---
+const {titulo, height}= Astro.props
+---
+<div class=`title py-${height} md:py-2 rounded-sm mx-auto w-10/12  bg-yellow-ad flex flex-row justify-center items-center`>
+    <h2 class=" text-base  md:text-2xl font-medium text-wrap  text-center text-primary-black-ad">{titulo}</h2>
+</div>
+<!-- <style>
+    .title {
+        height: 2.5rem;
+    }
+    @media screen and (min-width: 768px) {
+        .title {
+            height: 5rem;
+        }
+    }
+</style> -->
