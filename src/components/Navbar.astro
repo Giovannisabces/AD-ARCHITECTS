@@ -4,17 +4,17 @@
 const servicios = [
 	{
         name: "Diseños Arquitectonicos",
-        link: "/Diseno-Arquitectonicos"
+        link: "/arquitectonico"
       },
       {
         name: "Diseños Interiores y Cocinas",
-        link: "/Interiores-y-Cocinas"
+        link: "/interiores"
       },{
         name: "Remodelaciones y construcicones",
-        link: "/Remodelaciones-y-construcicones"
+        link: "/remodelaciones"
       },{
         name: "Impermeabilizaciones de fachadas y cubiertas",
-        link: "/Impermeabilizaciones"
+        link: "/impermeabilizaciones"
       },
       {
         name: "Mantenimientos Generales",
@@ -28,48 +28,46 @@ const navMenu = [
   },
   {
      name: "Nosotros",
+	 link: "/Nosotros"
   },
   {
     name: "Contactanos",
+	link: "/Contactanos"
   },
   {
-    name: "",
+    name: "Nuestro proyectos",
+	link: "/proyects"
   },
 
 ]
-
-
-// console.log(list)
 ---
-<nav class="nav flex flex-col flex-nowrap justify-center items-center overflow-hidden pointer-events-none w-full h-0 md:block  md:w-auto transition-all ease-in-out duration-500">
-	<ul class= "flex flex-col md:flex-row flex-nowrap justify-end items-center  ">
-		<!-- <li class="li my-4  md:mx-3"><a href="/" class="a">item 1</a></li>
-		<li class="li my-4  md:mx-3"><a href="/proyects/" class="a">item 2</a></li>
-		<li class="li my-4  md:mx-3"><a href="/" class="a">item 3</a></li>
-		<li class="li my-4  md:mx-3"><a href="/" class="a">item 4</a></li>
-		<li class="li my-4  md:mx-3"><a href="/" class="a">item 5</a></li> -->
-		<li class="li my-4  md:mx-3"><button class="servicios"></button></li> 
-		<!-- {		
-			 navMenu.map(principalOption => {
-			 	
-			 		<li class="w-full text-center" > {principalOption.name} </p></li>
-			 		{
-			 			if (principalOption.opciones.length != 0) {
-			 				<ul>
-			 				principalOption.opciones.map(servicio => {
-			 						<li> {servicio}</li>	
-			 				})
-			 				</ul>
-			 			}
-			 		}
-			 		
-			 	})
-			}</li> -->
+<nav class="nav flex flex-col flex-nowrap justify-start items-center overflow-hidden pointer-events-none w-full h-0  2xl:block  md:w-auto transition-all ease-in-out duration-500">
+	<ul class= "flex flex-col gap-1 w-full md:flex-row flex-nowrap justify-end items-center md:px-8">
+		{
+			navMenu.map(navItem =>{
+				if (!navItem.submenu){
+					return <li class="li py-4 w-full bg-yellow-ad md:mx-3 flex justify-center"><a href=`${navItem.link}` class="Option text-primary-black-ad">{navItem.name}</a></li>
+				}else{
+					return (<li class="li flex justify-center containerService mt-5 w-full py-4 md:mx-3 bg-yellow-ad-sec"><button id="serviceBtnMenu" class="serviceBtnMenu servicios text-primary-black-ad">{navItem.name}</button></li>
+					<ul class="servicesMenu flex flex-col gap-1 flex-nowrap justify-start items-center overflow-hidden pointer-events-none w-full h-0  md:w-auto transition-all ease-in-out duration-500">
+						{
+							navItem.submenu.map(servicio =>{
+								return <li class="li py-4 flex justify-center w-full bg-yellow-ad-sec md:mx-3"><a href=`${servicio.link}` class=`text-primary-black-ad ${servicio.name.replaceAll(' ','-')} ` >{servicio.name} </a></li>
+							})
+						}
+					</ul>)
+				}
+			})
+		}
 	</ul>
 </nav>
 <style>
 	.nav.activo{
-		height: 50vb;
+		height: 100vb;
+		pointer-events: auto;
+	}
+  .servicesMenu.activo{
+		height: 40vb;
 		pointer-events: auto;
 	}
 </style>
