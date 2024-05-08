@@ -28,7 +28,7 @@ function toggleMenu(nav: HTMLElement | null, requireClass?:boolean ) {
 }
 function toggleMenuService(nav: HTMLElement | null, btn: HTMLElement | null, texbtnbtn: HTMLElement | null) {
 	nav?.classList.toggle("activo")
-	btn?.classList.toggle("bg-primary-black-ad")
+	btn?.classList.toggle("bg-yellow-ad-sec")
 	texbtnbtn?.classList.toggle("text-yellow-ad-sec")
 
 console.log("menuMobile Toggle menu");
