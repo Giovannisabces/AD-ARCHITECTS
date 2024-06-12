@@ -1,0 +1,39 @@
+---
+const { gallery_name, size } = Astro.props
+const size_gallery = size;
+let gallery_items = [];
+
+//  Get a new gallery with the specified name
+for (let i = 1; i <= size_gallery ; i++) {
+    // gallery_items.push({src: `./src/img/${gallery_name}/${gallery_name}-${i}.jpg`})
+    gallery_items.push({src: `./src/img/${gallery_name}/${gallery_name}-1.jpg`})
+}
+---
+<section class="gallery-container__section w-10/12 my-8 mx-auto" id="gallery-container">
+    <div class="gallery-container mx-auto lg:w-[800px]">
+    {
+        gallery_items.map(gallery => {
+            return (<img class="mx-auto" src={gallery.src} alt=" ">)
+        })
+    }
+  </div>
+    <img src="" alt="">
+</section>
+<style>
+    
+.gallery-container {
+  display: grid;
+  max-width: 800 px;
+  grid-template-columns: repeat(
+    auto-fit, minmax(120px,1fr));
+    /* auto-fill, minmax(); -> Hace que se rellene pero no ocupe todo el espacio */
+    /* Auto-fit -> Hace que se rellene todo */
+
+  gap: 10px;
+}
+
+img{
+  width: 200 px;
+  height: auto;
+}
+</style>
