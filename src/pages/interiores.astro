@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '@/components/Footer.astro';
+import Gallery from '@/components/Gallery.astro';
+import Titulos from '@/components/Titulos.astro';
+
+import Descripcion from '@/components/arquitectonico/Descripcion.astro';
+
+---
+
+<Layout 
+	title="AD ARCHITECTS - Diseños Arquitectonicos"
+	description="Ofrecemos diseños Arquitectonicos a medida segun tus necesidades."
+>
+	<main>
+		<Titulos titulo="Diseño de Interiores y cocinas" height="2"/>
+		<Gallery gallery_name="interiores" size="10"/>
+		<Descripcion/>
+	</main>
+	<Footer/>
+	<script >
+		import "../scripts/menu.js";
+	</script>
+</Layout>
+
+<style>
+</style>
