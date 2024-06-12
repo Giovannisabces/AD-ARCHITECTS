@@ -5,7 +5,9 @@
     "impermeabilizaciones":{
 
     },
-    "interiores":{},
+    "interiores":{
+        "Description": "diseñamos tu espacialidad interior con alta experiencia en el mercado, donde realizamos levantamientos 3d  a escala de  todo tipo de espacios, cocinas, oficinas, apartamentos, casas, quintas, brindando asesorias profesionales con teorias del color, espacialidad, funcionalidad y acabados."
+    },
     "proyectos":{},
     "remodelaciones":{}
 }
