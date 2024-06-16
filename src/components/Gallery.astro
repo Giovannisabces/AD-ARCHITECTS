@@ -1,7 +1,13 @@
 ---
-const { gallery_name, size } = Astro.props
+interface Props {
+  gallery_name: string;
+  size: number;
+}
+const { gallery_name = 'interiores', size } = Astro.props;
+import names from "@/shared/data.json";
 const size_gallery = size;
 let gallery_items = [];
+const title_service = {interiores: [""]};
 
 //  Get a new gallery with the specified name
 for (let i = 1; i <= size_gallery ; i++) {
@@ -10,10 +16,19 @@ for (let i = 1; i <= size_gallery ; i++) {
 }
 ---
 <section class="gallery-container__section w-10/12 my-8 mx-auto" id="gallery-container">
-    <div class="gallery-container mx-auto lg:w-[800px]">
+    <div class="gallery-container mx-auto max-w-4xl">
     {
-        gallery_items.map(gallery => {
-            return (<img class="mx-auto" src={gallery.src} alt=" ">)
+        gallery_items.map((gallery,index:number) => {
+            return (<div class={`container-${index} container rounded-xl flex flex-col justify-center  bg-cover bg-no-repeat w-full h-auto aspect-square`} 
+                style={`
+                    width: 100%;
+                    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${gallery.src});
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                  `}>
+                <p class="relative text-slate-950 text-xl sm:text-xs text-center font-bold"> { names.interiores[index] } </p>
+              </div> )
         })
     }
   </div>
@@ -32,8 +47,8 @@ for (let i = 1; i <= size_gallery ; i++) {
   gap: 10px;
 }
 
-img{
+/* img{
   width: 200 px;
   height: auto;
-}
+} */
 </style>
