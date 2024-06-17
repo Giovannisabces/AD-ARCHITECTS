@@ -1,6 +1,14 @@
 ---
-import {arquitectonico} from "@/ad";
+import {descriptionPages as dp} from "@/ad";
+interface Props{
+    descriptionPage: string ;
+}
+
+const {descriptionPage} = Astro.props;
+const textDescription = dp.filter(dp=>dp.name==descriptionPage)
+console.log(descriptionPage, textDescription)
+// console.log(textDescription)
 ---
 <section class="mx-auto w-5/6">
-    <p class="text-center">{arquitectonico.Description}</p>
+    <p class="text-center">{textDescription[0].Description}</p>
 </section>
