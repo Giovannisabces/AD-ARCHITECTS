@@ -1,13 +1,22 @@
 {
-    "arquitectonico":{
-        "Description": "En AD ARCHITECTS S.A.S realizamos todo tipo de dieños arquitectonicos, en donde la arquitectura es el arte y la tecnica de concebir, diseñar y contruir espacios donde la funcionalidad, el confort, el desarrollo ambiental minimizando la huella ecologica y el habitat, siempre iran  de la mano. "
-    },
-    "impermeabilizaciones":{
-
-    },
-    "interiores":{
-        "Description": "diseñamos tu espacialidad interior con alta experiencia en el mercado, donde realizamos levantamientos 3d  a escala de  todo tipo de espacios, cocinas, oficinas, apartamentos, casas, quintas, brindando asesorias profesionales con teorias del color, espacialidad, funcionalidad y acabados."
-    },
-    "proyectos":{},
-    "remodelaciones":{}
+    "descriptionPages":[
+        {
+            "name":"arquitectonico",
+            "Description": "En AD ARCHITECTS S.A.S realizamos todo tipo de dieños arquitectonicos, en donde la arquitectura es el arte y la tecnica de concebir, diseñar y contruir espacios donde la funcionalidad, el confort, el desarrollo ambiental minimizando la huella ecologica y el habitat, siempre iran  de la mano. "
+        },
+        {
+            "name":"impermeabilizaciones",
+            "Description": "En AD ARCHITECTS S.A.S nos preocupamos por tu vivienda y por el mantenimiento preventivo de tus impermeabilizaciones, por este motivo es muy importante  tu impermeabilización  correctiva ya que las impermeabilizaciones  tienen como objetivo corregir filtraciones, humedades o deterioros localizados en los diferentes elementos de construcción, nos enfocamos con la experiencia requerida para identificar los diferentes tipos de causas de las humedades para corregirlas y repararlas."
+        },
+        {
+            "name":"interiores",
+            "Description": "Diseñamos tu espacialidad interior con alta experiencia en el mercado, donde realizamos levantamientos 3D  a escala de  todo tipo de espacios, cocinas, oficinas, apartamentos, casas, quintas, brindando asesorias profesionales con teorias del color, espacialidad, funcionalidad y acabados."
+        },
+        {
+            "name":"proyectos"
+        },
+        {
+            "name":"remodelaciones"
+        }
+    ]
 }
