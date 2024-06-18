@@ -1,0 +1,85 @@
+---
+// import {about} from "@adarquitecture";
+const obra_gris=[
+    "Pañetes y alistados de pisos",
+    "Alistados de pisos",
+    "Mamposteria",
+    "Armado de cubiertas"
+];
+const obra_blanca=[
+    "Instalación de puertas y ventanas",
+    "Pinturas interiores y exteriores",
+    "Instalacion de revestimientos y muros",
+    "Recubrimientos para muros",
+    "Trabajos de herreria y carpinteria",
+    "Instalacion de iluminación LED de ultima texnologia y lamparas LED"
+];
+---
+<section class="main_content flex flex-col gap-2 mx-auto px-1 mt-5 w-10/12 lg:w-8/12 max-w-4xl">
+    <div class="subtitle">
+        <h2 class="text-slate-300 text-pretty text-center">Realizamos todo tipo de</h2>
+        <div class="separador bg-slate-300 h-0.5 "></div>
+        <h3 class="text-slate-300 text-pretty text-center">Obra civil y acabados</h3>
+    </div>
+    <div class="mt-2 flex flex-col w-auto">
+        <p class="">Remodelaciones</p>
+        <div class="w-36 h-0.5 bg-slate-300"></div>
+    </div>
+    <figure class="mx-auto mt-4 pb-8 sm:pb-32 rounded-xl flex justify-center place-items-end bg-center bg-cover bg-no-repeat w-2/3 aspect-4/3 bg-portada-remodelaciones">
+        <p class="text-lg font-medium md:font-semibold text-yellow-ad-sec">Remodelaciones</p>
+    </figure>
+    <!-- OBRA GRIS -->
+    <div class="mt-2 flex flex-col w-auto">
+        <p class="">Obra Gris</p>
+        <div class="w-24 h-0.5 bg-slate-300"></div>
+    </div>
+    <article class="grid gap-2 md:gap-5 grid-rows-2 grid-cols-2">
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[0]}</p> 
+        </div>
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[1]}</p> 
+        </div>
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[2]}</p> 
+        </div>
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[3]}</p> 
+        </div>
+    </article>
+    <!-- OBRA Blanca y acabados -->
+    <div class="mt-2 mb-4 flex flex-col w-auto">
+        <p class="">Obra Blanca y acabados</p>
+        <div class="w-48 h-0.5 bg-slate-300"></div>
+    </div>
+    <article class="grid gap-2 md:gap-5 grid-rows-2 grid-cols-2">
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[0]}</p> 
+        </div>
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[1]}</p> 
+        </div>
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[2]}</p> 
+        </div>
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[3]}</p> 
+        </div>
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[4]}</p> 
+        </div>
+        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
+            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[5]}</p> 
+        </div>
+    </article>
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+    /* h2 {
+        text-transform: uppercase;
+    } */
+</style>
