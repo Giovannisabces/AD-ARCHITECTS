@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '@/components/Footer.astro';
+import Titulos from '@/components/Titulos.astro';
+import Waterproofing from '@/components/Waterproofing.astro';
+import Descripcion from '@/components/arquitectonico/Descripcion.astro';
+---
+<Layout 
+	title="AD ARCHITECTS - Diseños Arquitectonicos"
+	description="Realizamos Todo tipo de impermeabilizaciones de fachadas y cubiertas a medida segun tus necesidades."
+>
+	<main>
+		<Titulos titulo="Impermeabilizaciones" height="2"/>
+		<Waterproofing/>
+		<Descripcion descriptionPage="impermeabilizaciones"/>
+	</main>
+	<Footer/>
+</Layout>
+
+<style>
+</style>
