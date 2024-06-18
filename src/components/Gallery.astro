@@ -2,8 +2,9 @@
 interface Props {
   gallery_name: string;
   size: number;
+  subset?: string;
 }
-const { gallery_name = 'interiores', size } = Astro.props;
+const { gallery_name, size, subset} = Astro.props;
 import names from "@/shared/data.json";
 const size_gallery = size;
 let gallery_items = [];
@@ -12,7 +13,11 @@ const title_service = {interiores: [""]};
 //  Get a new gallery with the specified name
 for (let i = 1; i <= size_gallery ; i++) {
     // gallery_items.push({src: `./src/img/${gallery_name}/${gallery_name}-${i}.jpg`})
-    gallery_items.push({src: `./src/img/${gallery_name}/${gallery_name}-1.jpg`})
+    if(subset!=undefined){
+      gallery_items.push({src: `./src/img/${gallery_name}/${subset}/${subset}-1.jpg`})
+    } else {
+      gallery_items.push({src: `./src/img/${gallery_name}/${gallery_name}-1.jpg`})
+    }
 }
 ---
 <section class="gallery-container__section w-10/12 my-8 mx-auto" id="gallery-container">
