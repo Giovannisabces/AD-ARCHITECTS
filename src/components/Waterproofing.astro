@@ -1,0 +1,39 @@
+---
+import Descripcion from '@/components/arquitectonico/Descripcion.astro';
+
+---
+<section class="main_content flex flex-col gap-2 mx-auto px-1 mt-5 w-10/12 lg:w-8/12 max-w-4xl">
+    <!-- Impermeabilizaciones de Cubiertas -->
+    <div class="subtitle">
+        <h2 class="text-slate-300 text-pretty text-center">Realizamos todo tipo de Impermeabilizaciones</h2>
+        <div class="separador bg-slate-300 h-0.5 "></div>
+        <h3 class="text-slate-300 text-pretty text-center">De fachadas y cubiertas</h3>
+    </div>
+    <div class="mt-2 flex flex-col w-auto">
+        <p class="">Impermeabilizaciones de</p>
+        <div class="w-48 h-0.5 bg-slate-300"></div>
+        <p>Cubiertas</p>
+    </div>
+    <a href="/frio"  class="mx-auto mt-4 rounded-xl flex justify-center place-items-center bg-center bg-cover bg-no-repeat w-2/3 aspect-video bg-imper-frio">
+        <p class="text-base sm:text-lg text-center font-medium md:font-semibold text-primary-black-ad">IMPERMEABILIZACIONES EN FRIO</p>
+    </a>
+    <a href="/calido" class="mx-auto mt-4 rounded-xl flex justify-center place-items-center bg-center bg-cover bg-no-repeat w-2/3 aspect-video bg-imper-calor">
+        <p class="text-base sm:text-lg text-center font-medium md:font-semibold text-yellow-ad-sec">IMPERMEABILIZACIONES EN CALOR</p>
+    </a>
+    <!-- Impermeabilizaciones de Fachadas -->
+    <div class="mt-2 flex flex-col w-auto">
+        <p class="">Impermeabilizaciones de</p>
+        <div class="w-48 h-0.5 bg-slate-300"></div>
+        <p>Fachadas</p>
+    </div>
+    <figure class="mx-auto mt-4 mb-6 rounded-xl flex justify-center place-items-center bg-center bg-cover bg-no-repeat w-2/3 aspect-video bg-main-imper">
+        <p class="text-base sm:text-lg text-center font-medium md:font-semibold text-primary-black-ad">IMPERMEABILIZACIONES</p>
+    </figure>
+</section>
+
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
