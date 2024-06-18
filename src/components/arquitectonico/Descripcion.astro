@@ -6,9 +6,7 @@ interface Props{
 
 const {descriptionPage} = Astro.props;
 const textDescription = dp.filter(dp=>dp.name==descriptionPage)
-console.log(descriptionPage, textDescription)
-// console.log(textDescription)
 ---
-<section class="mx-auto w-5/6">
+<section class="mx-auto w-10/12 max-w-4xl">
     <p class="text-center">{textDescription[0].Description}</p>
 </section>

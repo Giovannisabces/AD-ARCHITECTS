@@ -49,10 +49,10 @@ const navMenu = [
 					return <li class="li py-2 w-full bg-yellow-ad md:mx-3 flex justify-center"><a href=`${navItem.link}` class="Option text-primary-black-ad">{navItem.name}</a></li>
 				}else{
 					return (<li class="li flex justify-center containerService mt-5 w-full py-3 md:mx-3 bg-yellow-ad-sec"><button id="serviceBtnMenu" class="serviceBtnMenu servicios text-primary-black-ad">{navItem.name}</button></li>
-					<ul class="servicesMenu flex flex-col gap-1 flex-nowrap justify-start items-center overflow-hidden pointer-events-none w-full h-0  md:w-auto transition-all ease-in-out duration-500">
+					<ul class="servicesMenu flex flex-col gap-1 flex-nowrap justify-center items-center overflow-hidden pointer-events-none w-full h-0  md:w-auto transition-all ease-in-out duration-500">
 						{
 							navItem.submenu.map(servicio =>{
-								return <li class="li py-2 flex justify-center w-full bg-yellow-ad-sec md:mx-3"><a href=`${servicio.link}` class=`text-primary-black-ad ${servicio.name.replaceAll(' ','-')} ` >{servicio.name} </a></li>
+								return <li class="li py-2 flex justify-center w-full bg-yellow-ad-sec md:mx-3"><a href=`${servicio.link}` class=`text-primary-black-ad ${servicio.name.replaceAll(' ','-')} text-center` >{servicio.name} </a></li>
 							})
 						}
 					</ul>)
@@ -63,7 +63,7 @@ const navMenu = [
 </nav>
 <style>
 	.nav.activo{
-		height: 80dvb;
+		height: auto;
 		pointer-events: auto;
 	}
   .servicesMenu.activo{
