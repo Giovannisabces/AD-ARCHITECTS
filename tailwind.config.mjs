@@ -19,9 +19,13 @@ export default {
 				'remodelaciones': 			"url('/img/portada/CardServicios/Remodelaciones.webp')",
 				'impermeabilizaciones': 	"url('/img/portada/CardServicios/Impermeabilizaciones.webp')",
 				'mantenimientos': 			"url('/img/portada/CardServicios/Mantenimientos.webp')",
+				'portada-remodelaciones': 	"url('/img/portada/CardServicios/Remodelaciones.webp')",
 			},
 			boxShadow:{
 				'address': 'rgb(238, 245, 138) 3px 3px 6px 0px inset, rgba(255,255,255,0.2) -3px 3px 6px 1px inset'
+			},
+			aspectRatio: {
+				'4/3': '4 / 3',
 			}
 		},
 	},
