@@ -1,7 +1,10 @@
-import animations from 'tailwindcss-animated'
+// import animations from 'tailwindcss-animated'
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: [
+		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+		'./src/**/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'
+	],
 	theme: {
 		extend: {
 			colors:{
@@ -15,14 +18,14 @@ export default {
 			},
 			backgroundImage: {
 				'disenos-arquitectonicos': 	"url('/img/portada/CardServicios/Disenosarquitectonicos.webp')",
-				'disenos-interiores': 		"url('/img/portada/CardServicios/Disenos-de-interiores-y-cocinas.webp')",
+				'disenos-interiores': 		"url('/img/portada/CardServicios/Disenosdeinterioresycocinas.webp')",
 				'remodelaciones': 			"url('/img/portada/CardServicios/Remodelaciones.webp')",
 				'impermeabilizaciones': 	"url('/img/portada/CardServicios/Impermeabilizaciones.webp')",
 				'mantenimientos': 			"url('/img/portada/CardServicios/Mantenimientos.webp')",
 				'portada-remodelaciones': 	"url('src/img/remodelaciones/Remodelaciones.webp')",
-				'imper-frio': 				"url('src/img/Impermeabilizaciones/Impermeabilizaciones-frio.webp')",
-				'imper-calor': 				"url('src/img/Impermeabilizaciones/Impermeabilizaciones-calor.webp')",
-				'main-imper': 				"url('src/img/Impermeabilizaciones/Impermeabilizaciones.webp')",
+				'imper-frio': 				"url('/img/Impermeabilizaciones/Impermeabilizaciones-frio.webp')",
+				'imper-calor': 				"url('/img/Impermeabilizaciones/Impermeabilizaciones-calor.webp')",
+				'main-imper': 				"url('/img/Impermeabilizaciones/Impermeabilizaciones.webp')",
 			},
 			boxShadow:{
 				'address': 'rgb(238, 245, 138) 3px 3px 6px 0px inset, rgba(255,255,255,0.2) -3px 3px 6px 1px inset'
@@ -32,13 +35,5 @@ export default {
 			}
 		},
 	},
-	plugins: [
-		// animations,
-		{
-			'postcss-import': {},
-			'tailwindcss/nesting': {},
-			tailwindcss: {},
-			autoprefixer: {},
-		}
-	],
+	plugins: [],
 }
