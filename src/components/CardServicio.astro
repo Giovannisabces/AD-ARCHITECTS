@@ -1,61 +1,37 @@
 ---
-// interface Props {
-// 	title: string;
-// 	description: string;
-// }
 
-// const { title, description } = Astro.props;
+import imgDisenos from "../img/portada/CardServicios/Disenosarquitectonicos.webp"
+import imgInteriores from "../img/portada/CardServicios/Disenosdeinterioresycocinas.webp"
+import imgRemodelaciones from "../img/portada/CardServicios/Remodelaciones.webp"
+import imgImpermeabilizaciones from "../img/portada/CardServicios/Impermeabilizaciones.webp"
+import imgMantenimientos from "../img/portada/CardServicios/Mantenimientos.webp"
+// const path = "/src/img/portada/CardServicios/"
 const cards = [
-    { title: "Diseños arquitectonicos", link: "/Diseños", bgimg: "disenos-arquitectonicos"},
-    { title: "Diseños de interiores y cocinas", link: "/", bgimg: "disenos-interiores"},
-    { title: "Remodelaciones", link: "/", bgimg: "remodelaciones"},
-    { title: "Impermeabilizaciones de fachadas y cubiertas", link: "/", bgimg: "impermeabilizaciones"},
-    { title: "Mantenimientos Generales", link: "/", bgimg: "mantenimientos"}
-
+    { title: "Diseños arquitectonicos", link: "/Diseños", bgimg: imgDisenos.src},
+    { title: "Diseños de interiores y cocinas", link: "/", bgimg: imgInteriores.src},
+    { title: "Remodelaciones", link: "/", bgimg: imgRemodelaciones.src},
+    { title: "Impermeabilizaciones de fachadas y cubiertas", link: "/", bgimg: imgImpermeabilizaciones.src},
+    { title: "Mantenimientos Generales", link: "/", bgimg: imgMantenimientos.src}
 ];
 ---
-<section class="mt-10 w-full flex flex-col gap-5">
+<section class="mt-10 w-full flex flex-col  gap-1 lg:gap-5">
     {
         cards.map(({title, link, bgimg}) => {
             return (
-                <article class={`rounded-b-2xl my-5 flex flex-col bg-cover bg-center backgroundImage-${bgimg} bg-${bgimg} bg-no-repeat aspect-video w-64 mx-auto bg-opacity-90 rounded-xl`}>
-                    <header>
-                        <h5 class="capitalize text-center bg-cover text-primary-black-ad mx-auto font-semibold mt-2 bg-yellow-ad rounded-full py-3 bg-opacity-60  ">
+                <article class="rounded-2xl justify-between relative my-1 lg:my-3 flex flex-col aspect-square w-64 mx-auto ">
+                    <img class="absolute rounded-2xl w-full aspect-square object-cover object-center opacity-30 z-0" src={bgimg} alt="Mountains">
+                    <header class="px-2 z-50">
+                        <h5 class="capitalize text-center text-primary-black-ad mx-auto font-semibold mt-2 bg-yellow-ad rounded-full py-3 bg-opacity-60">
                             {title}
                         </h5>
                     </header>
-                    <footer class="flex mt-32 pb-5 pr-1 rounded-b-3xl ">
-                        <a href={link} target="_blank" class="py-2 px-5 items-end justify-end justify-items-end text-primary-black-ad bg-yellow-ad rounded-full font-bold  self-end bg-opacity-75">Ver mas</a>
+                    <footer class="flex rounded-2xl justify-end mt-32 pb-5 pr-1 rounded-b-3xl">
+                        <a href="" target="_blank" class="py-2 px-5 z-50 items-end justify-end justify-items-end text-primary-black-ad bg-yellow-ad rounded-full font-bold  self-end bg-opacity-75">Ver mas</a>
                     </footer>
-                </article>
+                </article> 
             );
         })
     }
-    <!-- <article class="rounded-b-2xl my-5 flex flex-col bg-cover bg-center backgroundImage-mantenimientos bg-mantenimientos bg-no-repeat aspect-video w-64 mx-auto bg-opacity-20 rounded-xl">
-        <header class="">
-            <h5 class="capitalize text-center bg-cover text-primary-black-ad mx-auto font-bold mt-2 bg-yellow-ad rounded-full py-3 bg-opacity-60  ">
-                Diseños arquitectonicos
-            </h5>
-        </header>
-        <footer class="flex mt-32 pb-5 pr-1 rounded-b-3xl ">
-            <a href="/" class="py-2 px-5 items-end justify-end justify-items-end text-primary-black-ad bg-yellow-ad rounded-full font-bold  self-end bg-opacity-75">Ver mas</a>
-        </footer>
-    </article> -->
-
-    <!-- <article class="flex flex-col bg-cover bg-center backgroundImage-disenos-arquitectonicos bg-disenos-arquitectonicos bg-no-repeat
-    aspect-video w-64 mx-auto bg-opacity-90 rounded-lg">
-        <header class="">
-            <h5 class="capitalize text-center bg-cover text-primary-black-ad mx-auto font-bold mt-2 bg-yellow-ad rounded-full py-3 bg-opacity-60  ">
-                Diseños arquitectonicos
-            </h5>
-        </header>
-        <footer class="flex mt-32 pb-5 pr-1">
-        <a href="" class="py-2 px-5 items-end justify-end justify-items-end
-        text-primary-black-ad bg-yellow-ad rounded-full font-bold  self-end bg-opacity-75">Ver mas</a>
-        </footer>
-    </article> -->
-
-    
 </section>
 
 <style>
@@ -63,13 +39,13 @@ const cards = [
     article header{
         flex-grow: 3;
     }
-    article footer{
+    {/* article footer{
         flex-grow:  1;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
         justify-items: flex-end;
-    }
+    } */}
 </style>
 
 
