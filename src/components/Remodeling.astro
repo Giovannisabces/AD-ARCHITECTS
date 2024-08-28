@@ -1,5 +1,5 @@
 ---
-// import {about} from "@adarquitecture";
+import imgRemodelaciones from "@imgRemodelaciones/Remodelaciones.webp"
 const obra_gris=[
     "Pañetes y alistados de pisos",
     "Alistados de pisos",
@@ -25,8 +25,9 @@ const obra_blanca=[
         <p class="">Remodelaciones</p>
         <div class="w-36 h-0.5 bg-slate-300"></div>
     </div>
-    <figure class="mx-auto mt-4 pb-8 sm:pb-32 rounded-xl flex justify-center place-items-end bg-center bg-cover bg-no-repeat w-2/3 aspect-4/3 bg-portada-remodelaciones">
-        <p class="text-lg font-medium md:font-semibold text-yellow-ad-sec">Remodelaciones</p>
+    <figure class="rounded-2xl justify-end relative my-1 lg:my-3 flex flex-col aspect-4/3 w-2/3 mx-auto">
+        <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+        <figcaption class="mx-auto z-20 mb-16 md:mb-32 text-lg md:text-2xl font-medium md:font-semibold">Remodelaciones</figcaption>
     </figure>
     <!-- OBRA GRIS -->
     <div class="mt-2 flex flex-col w-auto">
@@ -34,18 +35,22 @@ const obra_blanca=[
         <div class="w-24 h-0.5 bg-slate-300"></div>
     </div>
     <article class="grid gap-2 md:gap-5 grid-rows-2 grid-cols-2">
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[0]}</p> 
-        </div>
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[1]}</p> 
-        </div>
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[2]}</p> 
-        </div>
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[3]}</p> 
-        </div>
+        <figure class="card_obra_gris rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto p-4">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-lg font-medium md:font-semibold">{obra_gris[0]}</figcaption>
+        </figure>
+        <figure class="card_obra_gris rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-lg font-medium md:font-semibold">{obra_gris[1]}</figcaption>
+        </figure>
+        <figure class="card_obra_gris rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-lg font-medium md:font-semibold">{obra_gris[2]}</figcaption>
+        </figure>
+        <figure class="card_obra_gris rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-lg font-medium md:font-semibold">{obra_gris[3]}</figcaption>
+        </figure>
     </article>
     <!-- OBRA Blanca y acabados -->
     <div class="mt-2 mb-4 flex flex-col w-auto">
@@ -53,24 +58,30 @@ const obra_blanca=[
         <div class="w-48 h-0.5 bg-slate-300"></div>
     </div>
     <article class="grid gap-2 md:gap-5 grid-rows-2 grid-cols-2">
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[0]}</p> 
-        </div>
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[1]}</p> 
-        </div>
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[2]}</p> 
-        </div>
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[3]}</p> 
-        </div>
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[4]}</p> 
-        </div>
-        <div class="card_obra_gris flex rounded-xl md:rounded-3xl justify-center place-items-center bg-center bg-cover bg-no-repeat aspect-4/3 bg-portada-remodelaciones">
-            <p class="text-lg text-center font-medium md:font-semibold">{obra_gris[5]}</p> 
-        </div>
+        <figure class="obra_blanca rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto px-5">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-base sm:text-lg font-medium md:font-semibold">{obra_blanca[0]}</figcaption>
+        </figure>
+        <figure class="obra_blanca rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto px-5">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-base sm:text-lg font-medium md:font-semibold">{obra_blanca[1]}</figcaption>
+        </figure>
+        <figure class="obra_blanca rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto px-5">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-base sm:text-lg font-medium md:font-semibold">{obra_blanca[2]}</figcaption>
+        </figure>
+        <figure class="obra_blanca rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto px-5">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-base sm:text-lg font-medium md:font-semibold">{obra_blanca[3]}</figcaption>
+        </figure>
+        <figure class="obra_blanca rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto px-5">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-base sm:text-lg font-medium md:font-semibold">{obra_blanca[4]}</figcaption>
+        </figure>
+        <figure class="obra_blanca rounded-xl justify-center place-items-center relative flex aspect-4/3 w-full mx-auto sm:px-5">
+            <img class="absolute top-0 right-0 rounded-2xl w-full aspect-4/3 object-cover object-center z-0" src={imgRemodelaciones.src} alt="">
+            <figcaption class="m-auto text-center z-20 text-base sm:text-lg font-medium md:font-semibold">{obra_blanca[5]}</figcaption>
+        </figure>
     </article>
 </section>
 

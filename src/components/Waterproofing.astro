@@ -1,18 +1,8 @@
 ---
-import Descripcion from '@/components/arquitectonico/Descripcion.astro';
-// import type { ImageMetadata } from 'astro';
-// import { Image } from 'astro:assets';
-
-// interface Props {
-//     imagePath: string;
-//     altText: string;
-//     name: string;
-//     age: number;
-// }
-
-// const { imagePath, altText, name, age } = Astro.props;
-// const images = import.meta.glob<{ default: ImageMetadata }>('/src/img/Impermeabilizaciones/*.{jpeg,jpg,png,gif,webp}');
-// console.log(images)
+// import Descripcion from '@/components/arquitectonico/Descripcion.astro';
+import imgFrio from '@imgImpermeabilizaciones/Impermeabilizaciones-frio.webp'
+import imgCalido from '@imgImpermeabilizaciones/Impermeabilizaciones-calor.webp'
+import imgImpermeabilizaciones from '@imgImpermeabilizaciones/Impermeabilizaciones.webp'
 ---
 <section class="main_content flex flex-col gap-2 mx-auto px-1 mt-5 w-10/12 lg:w-8/12 max-w-4xl">
     <!-- Impermeabilizaciones de Cubiertas -->
@@ -26,11 +16,15 @@ import Descripcion from '@/components/arquitectonico/Descripcion.astro';
         <div class="w-48 h-0.5 bg-slate-300"></div>
         <p>Cubiertas</p>
     </div>
-    <a href="/frio"  class="mx-auto mt-4 rounded-xl flex justify-center place-items-center bg-center bg-cover bg-no-repeat w-2/3 aspect-video bg-imper-frio">
-        <p class="text-base sm:text-lg text-center font-medium md:font-semibold text-primary-black-ad">IMPERMEABILIZACIONES EN FRIO</p>
+    <!-- Impermeabilizaciones en FRIO -->
+    <a href="/frio" class="rounded-xl justify-center place-items-center relative flex aspect-video w-2/3 mx-auto mt-4 p-4">
+        <img class="absolute top-0 right-0 rounded-2xl w-full aspect-video object-cover object-center z-0" src={imgFrio.src} alt="Imagen de enlace a impermeabilizaciones en frio">
+        <p class="text-base text-center z-20 sm:text-lg font-medium md:font-semibold text-primary-black-ad">IMPERMEABILIZACIONES EN FRIO</p>
     </a>
-    <a href="/calido" class="mx-auto mt-4 rounded-xl flex justify-center place-items-center bg-center bg-cover bg-no-repeat w-2/3 aspect-video bg-imper-calor">
-        <p class="text-base sm:text-lg text-center font-medium md:font-semibold text-yellow-ad-sec">IMPERMEABILIZACIONES EN CALOR</p>
+    <!-- Impermeabilizaciones en CALOR -->
+    <a href="/calido" class="rounded-xl justify-center place-items-center relative flex aspect-video w-2/3 mx-auto mt-4 p-4">
+        <img class="absolute top-0 right-0 rounded-2xl w-full aspect-video object-cover object-center z-0" src={imgCalido.src} alt="Imagen de enlace a impermeabilizaciones en calor">
+        <p class="text-base text-center z-20 sm:text-lg font-medium md:font-semibold text-yellow-ad-sec">IMPERMEABILIZACIONES EN CALOR</p>
     </a>
     <!-- Impermeabilizaciones de Fachadas -->
     <div class="mt-2 flex flex-col w-auto">
@@ -38,8 +32,9 @@ import Descripcion from '@/components/arquitectonico/Descripcion.astro';
         <div class="w-48 h-0.5 bg-slate-300"></div>
         <p>Fachadas</p>
     </div>
-    <figure class="mx-auto mt-4 mb-6 rounded-xl flex justify-center place-items-center bg-center bg-cover bg-no-repeat w-2/3 aspect-video bg-main-imper">
-        <p class="text-base sm:text-lg text-center font-medium md:font-semibold text-primary-black-ad">IMPERMEABILIZACIONES</p>
+    <figure class="rounded-xl justify-center place-items-center relative flex aspect-video w-2/3 mx-auto mb-4">
+        <img class="absolute top-0 right-0 rounded-2xl w-full aspect-video object-cover object-center z-0" src={imgImpermeabilizaciones.src} alt="Banner principal impermeabilizaciones">
+        <p class="text-base text-center z-20 sm:text-lg font-medium md:font-semibold text-primary-black-ad">IMPERMEABILIZACIONES</p>
     </figure>
 </section>
 

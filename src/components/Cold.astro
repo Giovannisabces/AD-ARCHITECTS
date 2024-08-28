@@ -1,14 +1,19 @@
 ---
+import CardWaterproofing from "@/components/CardsWaterproofing.astro"
 const regis_fotografico = [];
+interface Props {
+    type_waterproofing: string;
+}
+
+const { type_waterproofing } = Astro.props;
 for (let index = 1; index <= 4; index++){
-    regis_fotografico.push(`src/img/Impermeabilizaciones/Frio/Frio-${index}.webp`);
+    regis_fotografico.push(`/src/img/Impermeabilizaciones/${type_waterproofing}/${type_waterproofing}-${index}.webp`);
 }
 ---
 <section class="main_content flex flex-col gap-2 mx-auto px-1 mt-5 w-10/12 lg:w-8/12 max-w-4xl">
      {
         regis_fotografico.map(imagen =>{
-            return(<img src={imagen} class="mx-auto mt-4 rounded-xl object-cover w-full aspect-4/3"></img>)
+            return (<CardWaterproofing imagePath={imagen} altText=""></CardWaterproofing>)
         })
      }
 </section>
-
