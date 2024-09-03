@@ -4,3 +4,6 @@ export const DISPLAY = {
 	open: "open",
 	hamburgerButtonClicked: "hamburgerButtonClicked",
 } as const;
+export const SVGBUTTON = {
+	svgHamburgerMenuClass: "#hamburger"
+}
