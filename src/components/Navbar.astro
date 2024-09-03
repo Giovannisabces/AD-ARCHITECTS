@@ -41,14 +41,14 @@ const navMenu = [
 
 ]
 ---
-<nav class="nav flex flex-col flex-nowrap justify-start items-center overflow-hidden pointer-events-none w-full h-0  2xl:block  md:w-auto transition-all ease-in-out duration-500">
+<nav class="nav flex flex-col flex-nowrap justify-start items-center overflow-hidden pointer-events-none w-full h-0 md:hidden 2xl:block  md:w-auto transition-all ease-in-out duration-500">
 	<ul class= "flex flex-col border-t-2 border-yellow-ad-sec gap-1 w-full md:flex-row flex-nowrap justify-end items-center md:px-8">
 		{
 			navMenu.map(navItem =>{
 				if (!navItem.submenu){
 					return <li class="li py-2 w-full bg-yellow-ad md:mx-3 flex justify-center"><a href=`${navItem.link}` class="Option text-primary-black-ad">{navItem.name}</a></li>
 				}else{
-					return (<li class="li flex justify-center containerService mt-5 w-full py-3 md:mx-3 bg-yellow-ad-sec"><button id="serviceBtnMenu" class="serviceBtnMenu servicios text-primary-black-ad">{navItem.name}</button></li>
+					return (<li class="li containerService flex justify-center mt-5 w-full py-3 md:mx-3 bg-yellow-ad-sec"><button id="serviceBtnMenu" class="serviceBtnMenu servicios text-primary-black-ad w-full">{navItem.name}</button></li>
 					<ul class="servicesMenu flex flex-col gap-1 flex-nowrap justify-center items-center overflow-hidden pointer-events-none w-full h-0  md:w-auto transition-all ease-in-out duration-500">
 						{
 							navItem.submenu.map(servicio =>{

@@ -1,0 +1,71 @@
+---
+// import Hamburger from "@/Icons/Hamburger.astro"
+
+const servicios = [
+	{
+        name: "Diseños Arquitectonicos",
+        link: "/arquitectonico"
+      },
+      {
+        name: "Diseños Interiores y Cocinas",
+        link: "/interiores"
+      },{
+        name: "Remodelaciones y construcicones",
+        link: "/remodelaciones"
+      },{
+        name: "Impermeabilizaciones de fachadas y cubiertas",
+        link: "/impermeabilizaciones"
+      },
+      {
+        name: "Mantenimientos Generales",
+        link: "/Mantenimientos"
+      }
+]
+const navMenu = [
+  {
+    name: "Ofrecemos servicios de",
+	submenu: servicios
+  },
+  {
+     name: "Nosotros",
+	 link: "/Nosotros"
+  },
+  {
+    name: "Contactanos",
+	link: "/Contactanos"
+  },
+  {
+    name: "Nuestro proyectos",
+	link: "/proyects"
+  },
+
+]
+// The navbar is active when the screen size is md or larger (you have to modify md in both header-navbardesktop)
+---
+<nav class="navDesktop md:flex flex-row flex-nowrap justify-between pointer-events-none md:pointer-events-auto h-0 md:h-auto hidden  md:w-auto transition-all ease-in-out duration-500">
+	<ul class= "flex gap-1 md:flex-row flex-nowrap justify-end items-center">
+		{
+			navMenu.map(navItem =>{
+				if (!navItem.submenu){
+					return <li class="li p-2 justify-center"><a href=`${navItem.link}` class="Option text-yellow-ad-sec text-xs">{navItem.name}</a></li>
+				}else{
+					return (<li class="li containerServiceDesktop rounded-md flex relative justify-center my-5 py-3"><button id="serviceBtnMenuDesktop" class="serviceBtnMenuDesktop px-2 servicios text-yellow-ad-sec w-full">{navItem.name}</button>
+                    <ul class="servicesMenuDesktop flex absolute top-16 left-0 flex-col gap-1 flex-nowrap justify-center items-center overflow-hidden pointer-events-none h-0  md:w-auto transition-all ease-in-out duration-500">
+                      {
+                        navItem.submenu.map(servicio =>{
+                          return <li class="li py-2 rounded-md flex justify-center bg-yellow-ad-sec md:mx-3"><a class="w-full text-center text-black" href=`${servicio.link}` class=`text-primary-black-ad ${servicio.name.replaceAll(' ','-')} text-center` >{servicio.name} </a></li>
+                        })
+                      }
+                    </ul>
+                  </li>)
+				}
+			})
+		}
+	</ul>
+</nav>
+<style>
+  .servicesMenuDesktop.activo{
+		height: auto;
+		pointer-events: auto;
+	}
+</style>
