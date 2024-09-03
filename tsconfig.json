@@ -11,7 +11,14 @@
       ],
       "@/ad": [
         "./ad.json"
-      ]
+      ],
+      "@img": ["./src/img/portada/CardServicios"],
+      "@imgPortada/*": ["src/img/portada/CardServicios/*"],
+      "@imgRemodelaciones/*": ["src/img/remodelaciones/*"],
+      "@imgImpermeabilizaciones/*": ["src/img/Impermeabilizaciones/*"],
+      "@imgCalor/*": ["src/img/Impermeabilizaciones/Calor/*"],
+      "@imgFrio/*": ["src/img/Impermeabilizaciones/Frio/*"],
+
     }
   },
   "exclude": [
