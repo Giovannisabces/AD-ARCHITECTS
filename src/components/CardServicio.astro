@@ -7,28 +7,28 @@ import imgImpermeabilizaciones from "../img/portada/CardServicios/Impermeabiliza
 import imgMantenimientos from "../img/portada/CardServicios/Mantenimientos.webp"
 // const path = "/src/img/portada/CardServicios/"
 const cards = [
-    { title: "Diseños arquitectonicos", link: "/Diseños", bgimg: imgDisenos.src},
-    { title: "Diseños de interiores y cocinas", link: "/", bgimg: imgInteriores.src},
-    { title: "Remodelaciones", link: "/", bgimg: imgRemodelaciones.src},
-    { title: "Impermeabilizaciones de fachadas y cubiertas", link: "/", bgimg: imgImpermeabilizaciones.src},
-    { title: "Mantenimientos Generales", link: "/", bgimg: imgMantenimientos.src}
+    { title: "Diseños arquitectonicos", link: "/arquitectonico", bgimg: imgDisenos.src},
+    { title: "Diseños de interiores y cocinas", link: "/interiores", bgimg: imgInteriores.src},
+    { title: "Remodelaciones", link: "/remodelaciones", bgimg: imgRemodelaciones.src},
+    { title: "Impermeabilizaciones de fachadas y cubiertas", link: "/impermeabilizaciones", bgimg: imgImpermeabilizaciones.src},
+    { title: "Mantenimientos Generales", link: "/mantenimientos", bgimg: imgMantenimientos.src}
 ];
 ---
 <section class="mt-10 w-full flex flex-col  gap-1 lg:gap-5">
     {
         cards.map(({title, link, bgimg}) => {
             return (
-                <article class="rounded-2xl justify-between relative my-1 lg:my-3 flex flex-col aspect-square w-64 mx-auto ">
-                    <img class="absolute rounded-2xl w-full aspect-square object-cover object-center opacity-60 z-0" src={bgimg} alt="Mountains">
+                <a href={link} target="_blank" class="rounded-2xl justify-between relative my-1 lg:my-3 flex flex-col aspect-square w-64 md:w-96 mx-auto ">
+                    <img class="saturate-50 absolute rounded-2xl w-full aspect-square object-cover object-center opacity-70 z-0" src={bgimg} alt="Mountains">
                     <header class="px-2 z-50">
                         <h5 class="capitalize text-center text-primary-black-ad mx-auto font-semibold mt-2 bg-yellow-ad rounded-full py-3 bg-opacity-60">
                             {title}
                         </h5>
                     </header>
                     <footer class="flex rounded-2xl justify-end mt-32 pb-5 pr-1 rounded-b-3xl">
-                        <a href="" target="_blank" class="py-2 px-5 z-50 items-end justify-end justify-items-end text-primary-black-ad bg-yellow-ad rounded-full font-bold  self-end bg-opacity-75">Ver mas</a>
+                        <p class="py-2 px-5 z-50 items-end justify-end justify-items-end text-primary-black-ad bg-yellow-ad rounded-full font-bold  self-end bg-opacity-75">Ver mas</p>
                     </footer>
-                </article> 
+                </a> 
             );
         })
     }

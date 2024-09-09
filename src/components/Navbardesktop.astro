@@ -47,13 +47,13 @@ const navMenu = [
 		{
 			navMenu.map(navItem =>{
 				if (!navItem.submenu){
-					return <li class="li p-2 justify-center"><a href=`${navItem.link}` class="Option text-yellow-ad-sec text-xs">{navItem.name}</a></li>
+					return <li class="li p-2 justify-center"><a href=`${navItem.link}` class="Option uppercase text-yellow-ad-sec text-xs">{navItem.name}</a></li>
 				}else{
-					return (<li class="li containerServiceDesktop rounded-md flex relative justify-center my-5 py-3"><button id="serviceBtnMenuDesktop" class="serviceBtnMenuDesktop px-2 servicios text-yellow-ad-sec w-full">{navItem.name}</button>
-                    <ul class="servicesMenuDesktop flex absolute top-16 left-0 flex-col gap-1 flex-nowrap justify-center items-center overflow-hidden pointer-events-none h-0  md:w-auto transition-all ease-in-out duration-500">
+					return (<li class="li containerServiceDesktop rounded-md flex relative justify-center my-5 py-3"><button id="serviceBtnMenuDesktop" class="serviceBtnMenuDesktop uppercase px-2 servicios text-yellow-ad-sec w-full">{navItem.name}</button>
+                    <ul class="servicesMenuDesktop flex absolute shadow-md shadow-silver-ad-lines/50 bg-yellow-ad-sec rounded-sm top-16 left-0 flex-col gap-1 flex-nowrap justify-center items-center overflow-hidden pointer-events-none h-0  md:w-auto transition-all ease-in-out duration-500">
                       {
                         navItem.submenu.map(servicio =>{
-                          return <li class="li py-2 rounded-md flex justify-center bg-yellow-ad-sec md:mx-3"><a class="w-full text-center text-black" href=`${servicio.link}` class=`text-primary-black-ad ${servicio.name.replaceAll(' ','-')} text-center` >{servicio.name} </a></li>
+                          return <li class="li w-full my-1 py-2 rounded-md flex justify-center hover:bg-yellow-ad hover:drop-shadow-lg md:mx-3"><a class="w-full text-center text-black" href=`${servicio.link}` class=`text-primary-black-ad ${servicio.name.replaceAll(' ','-')} text-center` >{servicio.name} </a></li>
                         })
                       }
                     </ul>
